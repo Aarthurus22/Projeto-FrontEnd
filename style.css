@@ -95,6 +95,19 @@ body.dark-mode .navbar .bi-person-circle {
   gap: 0.55rem;
 }
 
+/* Ícone do menu responsivo no modo escuro */
+body.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+body.dark-mode .navbar-toggler {
+  border: 1.5px solid #fff;
+}
+
+.navbar-toggler {
+  transition: border 0.3s ease;
+}
+
 /* ======= Responsividade p/ navbar collapse menu ======= */
 @media (max-width:991px) {
   nav form[role="search"] {
@@ -125,8 +138,10 @@ body.dark-mode .navbar .bi-person-circle {
 .hero {
   background: var(--hero-bg);
   color: var(--text);
-  padding-top: 2rem;   /* reduzido */
-  min-height: auto;    /* evita espaçamento exagerado */
+  padding-top: 2rem;
+  /* reduzido */
+  min-height: auto;
+  /* evita espaçamento exagerado */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,7 +187,7 @@ body.dark-mode .navbar .bi-person-circle {
 }
 
 .carousel-img {
-  height: 45vh;
+  height: 400px; 
   object-fit: cover;
   filter: brightness(0.9);
   transition: filter 0.3s ease;
@@ -184,15 +199,16 @@ body.dark-mode .navbar .bi-person-circle {
 
 @media (max-width: 768px) {
   .carousel-img {
-    height: 35vh;
+    height: 400px; /* tablets */
   }
 }
 
 @media (max-width: 480px) {
   .carousel-img {
-    height: 25vh;
+    height: 300px; /* celulares */
   }
 }
+
 
 .row.g-4 {
   justify-content: center;
@@ -217,8 +233,6 @@ body.dark-mode .navbar .bi-person-circle {
   transition: box-shadow 0.3s ease;
   overflow: hidden;
 }
-
-
 
 
 body.dark-mode .custom-card {
