@@ -123,10 +123,10 @@ body.dark-mode .navbar .bi-person-circle {
 
 /* ======= HERO SECTION ======= */
 .hero {
-  min-height: 100vh;
   background: var(--hero-bg);
   color: var(--text);
-  padding-top: 4rem;
+  padding-top: 2rem;   /* reduzido */
+  min-height: auto;    /* evita espaçamento exagerado */
   display: flex;
   flex-direction: column;
   align-items: center;
