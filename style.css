@@ -196,13 +196,17 @@ body.dark-mode .navbar .bi-person-circle {
 
 .row.g-4 {
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
+
 
 /* ======= CARDS PADRÃO ======= */
 .custom-card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 15px;
+  border-radius: 10px;
   height: 380px;
   min-height: 380px;
   display: flex;
@@ -213,6 +217,9 @@ body.dark-mode .navbar .bi-person-circle {
   transition: box-shadow 0.3s ease;
   overflow: hidden;
 }
+
+
+
 
 body.dark-mode .custom-card {
   background-color: #1e1e1e;
@@ -278,7 +285,7 @@ body.dark-mode .custom-card .custom-btn {
 .multi-card-carousel .custom-card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: var(--card-shadow);
   height: 320px;
   min-height: 320px;
