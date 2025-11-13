@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Builder - Monte Seu Computador</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- Esquerda: nome do site -->
+      <a class="navbar-brand fw-bold" href="#">
+        PC Builder
+      </a>
+
+      <!-- Barra de pesquisa centralizada (some no mobile) -->
+      <form class="d-none d-lg-flex mx-3 flex-grow-1 justify-content-center" style="max-width: 400px;" role="search">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Pesquise seu produto" aria-label="Pesquisar">
+          <span class="input-group-text bg-white border-start-0 border-end">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+      </form>
+
+      <!-- Direita: menu -->
+      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item d-flex align-items-center me-2 gap-2">
+            <i class="bi bi-person-circle fs-4"></i>
+            <div class="d-flex flex-column align-items-start">
+              <span class="fw-semibold profile-link small" style="font-size:0.92rem;">Entre ou</span>
+              <span class="fw-semibold profile-link small" style="font-size:0.92rem;">Cadastre-se</span>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Monte seu PC</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Benchmark</a></li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <button id="theme-toggle" class="btn btn-theme-toggle" aria-label="Alternar tema">
+              <i class="bi bi-moon-stars"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex flex-column justify-content-center align-items-center text-center">
+
+    <div id="pcCarousel" class="carousel slide w-100" data-bs-interval="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/carrossel1.jpg" class="d-block w-100 carousel-img" alt="PC Gamer 1">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/carrossel2.jpg" class="d-block w-100 carousel-img" alt="PC Gamer 2">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/carrossel3.jpg" class="d-block w-100 carousel-img" alt="PC Gamer 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#pcCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#pcCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+
+    <div class="container">
+      <h2 class="section-title">Computadores Montados</h2>
+    </div>
+
+    <!-- Cards de componentes -->
+    <div class="container my-5">
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card custom-card text-center">
+            <img src="assets/pc2.jpg" class="card-img-top" alt="Gabinete Gamer">
+            <div class="card-body">
+              <h5 class="card-title">PC Gamer, Amd Ryzen 7 5700x, RTX 3060 12gb, 16gb Ram, SSD 512gb M.2 Nvme</h5>
+              <button class="btn custom-btn">Detalhes</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card custom-card text-center">
+            <img src="assets/pc3.jpg" class="card-img-top" alt="Processador Ryzen">
+            <div class="card-body">
+              <h5 class="card-title">PC Gamer, AMD Ryzen 5 5500, B550, 16GB (2x8) DDR4, SSD 480GB,RTX 5060</h5>
+              <button class="btn custom-btn">Detalhes</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card custom-card text-center">
+            <img src="assets/pc4.jpg" class="card-img-top" alt="Placa de Vídeo RTX">
+            <div class="card-body">
+              <h5 class="card-title">PC Gamer AMD Ryzen 3, GTX1650 4GB, 16GB DDR4 (2x8GB), SSD 128GB Sata</h5>
+              <button class="btn custom-btn">Detalhes</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card custom-card text-center">
+            <img src="assets/pc5.jpg" class="card-img-top" alt="Placa-mãe B550">
+            <div class="card-body">
+              <h5 class="card-title">PC Gamer Intel Core i5-10400F, RX6600 8GB, 16GB DDR4, 256GB NVMe</h5>
+              <button class="btn custom-btn">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PROCESSADORES ===== -->
+    <section class="container componentes-multi my-4">
+      <h2 class="section-title">Processadores</h2>
+
+      <div id="splide-processadores" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Ryzen_55600.jpg" class="card-img-top" alt="Ryzen 5 5600">
+                <div class="card-body">
+                  <h5 class="card-title">Ryzen 5 5600</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Intel5_12400F.jpg" class="card-img-top" alt="Intel i5 12400F">
+                <div class="card-body">
+                  <h5 class="card-title">Intel i5 12400F</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Ryzen_75800X3D.jpg" class="card-img-top" alt="Ryzen 7 5800X3D">
+                <div class="card-body">
+                  <h5 class="card-title">Ryzen 7 5800X3D</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Intel_i913900K.jpg" class="card-img-top" alt="Intel i9 13900K">
+                <div class="card-body">
+                  <h5 class="card-title">Intel i9 13900K</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Ryzen3_4100.jpg" class="card-img-top" alt="Ryzen 3 4100">
+                <div class="card-body">
+                  <h5 class="card-title">Ryzen 3 4100</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Intel_i713700F.jpg" class="card-img-top" alt="Intel i7 13700F">
+                <div class="card-body">
+                  <h5 class="card-title">Intel i7 13700F</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Ryzen_97950X.jpg" class="card-img-top" alt="Ryzen 9 7950X">
+                <div class="card-body">
+                  <h5 class="card-title">Ryzen 9 7950X</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Intel_i312100F.jpg" class="card-img-top" alt="Intel i3 12100F">
+                <div class="card-body">
+                  <h5 class="card-title">Intel i3 12100F</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Placa-mãe ===== -->
+    <section class="container componentes-multi my-4">
+      <h2 class="section-title">Placa-mãe</h2>
+      <div id="splide-placamae" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Gigabyte B550M Aorus Elite.jpg" class="card-img-top" alt="B550M">
+                <div class="card-body">
+                  <h5 class="card-title">Gigabyte B550M Aorus Elite</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/ASUS X570 Prime.jpg" class="card-img-top" alt="X570">
+                <div class="card-body">
+                  <h5 class="card-title">ASUS X570 Prime</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/MSI B460M PRO-VDH WiFi.jpg" class="card-img-top" alt="B460">
+                <div class="card-body">
+                  <h5 class="card-title">MSI B460M PRO-VDH WiFi</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Gigabyte B660M DS3H DDR4.jpeg" class="card-img-top" alt="B660">
+                <div class="card-body">
+                  <h5 class="card-title">Gigabyte B660M DS3H</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/ASUS Prime A320M-K.jpg" class="card-img-top" alt="A320M">
+                <div class="card-body">
+                  <h5 class="card-title">ASUS Prime A320M-K</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/MSI PRO Z690-A DDR4.jpg" class="card-img-top" alt="Z690">
+                <div class="card-body">
+                  <h5 class="card-title">MSI PRO Z690-A DDR4</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/Gigabyte B450M Gaming.jpg" class="card-img-top" alt="B450M">
+                <div class="card-body">
+                  <h5 class="card-title">Gigabyte B450M Gaming</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/H610M-HDVM.2.png" class="card-img-top" alt="H610M">
+                <div class="card-body">
+                  <h5 class="card-title">ASRock H610M-HDV/M.2</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Placa de Vídeo ===== -->
+    <section class="container componentes-multi my-4">
+      <h2 class="section-title">Placa de Vídeo</h2>
+      <div id="splide-gpu" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/GeForce_RTX3060_12GB.jpg" class="card-img-top" alt="RTX 3060">
+                <div class="card-body">
+                  <h5 class="card-title">GeForce RTX 3060 12GB</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/AMD Radeon RX 6600 8GB.jpg" class="card-img-top" alt="RX 6600">
+                <div class="card-body">
+                  <h5 class="card-title">AMD Radeon RX 6600 8GB</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/GeForce GTX 1650 4GB.jpg" class="card-img-top" alt="GTX 1650">
+                <div class="card-body">
+                  <h5 class="card-title">GeForce GTX 1650 4GB</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/GeForce RTX 4060 8GB.jpg" class="card-img-top" alt="RTX 4060">
+                <div class="card-body">
+                  <h5 class="card-title">GeForce RTX 4060 8GB</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/AMD Radeon RX 6700 XT.jpeg" class="card-img-top" alt="RX 6700 XT">
+                <div class="card-body">
+                  <h5 class="card-title">AMD Radeon RX 6700 XT</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/GeForce RTX 3050 8GB2.jpg" class="card-img-top" alt="RTX 3050">
+                <div class="card-body">
+                  <h5 class="card-title">GeForce RTX 3050 8GB</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/GeForce GTX 1660 Super2.jpg" class="card-img-top" alt="GTX 1660 Super">
+                <div class="card-body">
+                  <h5 class="card-title">GeForce GTX 1660 Super</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card custom-card text-center">
+                <img src="assets/AMD Radeon RX 550 4GB.jpg" class="card-img-top" alt="RX 550">
+                <div class="card-body">
+                  <h5 class="card-title">AMD Radeon RX 550 4GB</h5>
+                  <button class="btn custom-btn">Detalhes</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Benchmark ===== -->
+    <section class="container my-5">
+      <h2 class="section-title mb-4">Benchmark</h2>
+      <div class="row justify-content-center benchmark-row gx-0">
+        <div class="col-6 col-md-3">
+          <div class="benchmark-icon-card text-center">
+            <img src="assets/CPUB.png" alt="CPU" class="benchmark-img mb-2">
+            <div class="benchmark-label">CPU</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="benchmark-icon-card text-center">
+            <img src="assets/GPU_B.png" alt="GPU" class="benchmark-img mb-2">
+            <div class="benchmark-label">GPU</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="benchmark-icon-card text-center">
+            <img src="assets/SSD_B.png" alt="SSD" class="benchmark-img mb-2">
+            <div class="benchmark-label">SSD</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="benchmark-icon-card text-center">
+            <img src="assets/HDD_B.png" alt="HDD" class="benchmark-img mb-2">
+            <div class="benchmark-label">HDD</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero d-flex flex-column justify-content-center align-items-center text-center">
+      <div class="container mt-4">
+        <h1 class="fw-bold">Monte e Teste seu PC aqui</h1>
+        <p class="lead mt-3">Escolha os melhores componentes e veja o desempenho real.</p>
+        <a href="#" class="btn btn-primary mt-4 px-4 py-2">Começar Agora</a>
+      </div>
+    </section>
+
+    <footer class="text-center py-3">
+      <p class="mb-0">&copy; 2025 PC Builder - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
