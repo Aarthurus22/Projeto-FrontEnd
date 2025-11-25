@@ -1,0 +1,139 @@
+/* Variáveis de tema (cores, sombras, raios) */
+:root{
+  --bg: #ffffff;
+  --surface: #f8f9fa;
+  --text: #212529;
+  --muted: #6c757d;
+  --card-bg: #ffffff;
+  --card-border: rgba(0,0,0,0.08);
+  --accent: #0d6efd;
+  --accent-strong: #0b5ed7;
+  --shadow: 0 6px 18px rgba(13,110,253,0.06);
+  --radius: 8px;
+}
+
+/* Override para tema escuro (mesmas variáveis com valores alternativos) */
+body.dark-theme{
+  --bg: #0b1220;
+  --surface: #0f1720;
+  --text: #e6eef6;
+  --muted: #9aa6b2;
+  --card-bg: #071123;
+  --card-border: rgba(255,255,255,0.06);
+  --accent: #66a3ff;
+  --accent-strong: #3b82f6;
+  --shadow: 0 6px 18px rgba(102,163,255,0.06);
+}
+
+/* Reset/ajustes base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Texto secundário */
+.text-muted{
+  color:var(--muted) !important;
+}
+
+/* Largura máxima do container */
+.container{max-width:1100px}
+
+/* Estilo do cabeçalho (título) */
+.d-flex.align-items-center.justify-content-between.mb-3 h1{
+  margin:0;
+  font-size:1.4rem;
+  line-height:1.1;
+}
+
+/* Layout dos slots: alinha cards dentro do slot e aplica espaçamento */
+.component-slot{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding-top:6px;
+}
+
+/* Estilo base do card: cor, borda, raio e transições suaves */
+.card{
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:var(--radius);
+  transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  overflow:hidden;
+}
+
+/* Largura padrão dos cards dentro dos slots */
+.component-slot .card{
+  width:18rem;
+}
+
+/* Pequeno efeito de elevação ao passar o mouse */
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+/* Aparência do card quando selecionado */
+.card-select{
+  border:2px solid var(--accent) !important;
+  box-shadow:var(--shadow);
+}
+
+/* Imagem do card: tamanho fixo e cover */
+.card-img-top{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  display:block;
+  background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.03));
+}
+
+/* Espaçamento interno e tipografia do corpo do card */
+.card-body{padding:0.9rem}
+.card-title{font-size:1rem;margin-bottom:.25rem}
+.card-text{font-size:.875rem;color:var(--muted);margin-bottom:.6rem}
+
+/* Botões nos cards: tamanho e preenchimento */
+.card .btn{
+  font-size:.825rem;
+  padding:.38rem .6rem;
+}
+
+/* Resumo: mantém o card fixo ao rolar (sticky) */
+.card.sticky-top{position:sticky;top:1.25rem}
+.card.sticky-top .card-body{padding:1rem}
+
+/* Itens da lista de resumo: sem fundo e sem borda para visual limpo */
+.list-group-item{background:transparent;border:0;padding:.55rem 0}
+
+/* Texto pequeno */
+.small, small{font-size:.78rem}
+
+/* Botão de alternar tema: largura mínima para consistência visual */
+#themeToggle{
+  min-width:96px;
+}
+
+/* Ajustes para telas muito pequenas (responsividade) */
+@media (max-width:576px){
+  .component-slot{justify-content:flex-start}
+  .component-slot .card{width:100%}
+  .d-flex.align-items-center.justify-content-between.mb-3{flex-direction:column;align-items:flex-start;gap:.5rem}
+  #themeToggle{min-width:auto}
+}
+
+/* Destaque de foco para acessibilidade */
+button:focus, a:focus{
+  outline:3px solid rgba(13,110,253,0.12);
+  outline-offset:2px;
+}
+
+/* Linha horizontal com cor sutil do tema */
+hr{border-color:var(--card-border)}

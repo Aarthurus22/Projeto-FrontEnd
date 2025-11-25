@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monte seu PC — Demo</title>
+
+  <!-- Bootstrap CSS + estilo principal -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="monte.css">
+</head>
+
+<body>
+  <div class="container my-4">
+    <!-- Cabeçalho: título e controles (tema, limpar) -->
+    <header class="d-flex align-items-center justify-content-between mb-3">
+      <div>
+        <h1 class="mb-0">Monte seu PC</h1>
+        <p class="text-muted mb-0">Escolha um componente para cada categoria abaixo. 👇</p>
+      </div>
+
+      <!-- Barra de ações: alternar tema e limpar seleção -->
+      <div class="d-flex align-items-center" role="toolbar" aria-label="Controles principais">
+        <button id="themeToggle" type="button" class="btn btn-outline-secondary btn-sm me-2" aria-pressed="false"
+          aria-label="Alternar tema">Modo: Claro</button>
+        <button id="clearBtn" type="button" class="btn btn-sm btn-outline-danger me-2"
+          aria-label="Limpar seleção">Limpar</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="row">
+        <!-- Área principal: slots para cada categoria (cada slot receberá 1 card via JS) -->
+        <section class="col-lg-8">
+          <div id="slots">
+            <div class="mb-4">
+              <h4>CPU</h4>
+              <!-- Slot para inserir card da CPU -->
+              <div id="slot-CPU" class="component-slot" data-slot="cpu" data-label="CPU"></div>
+            </div>
+
+            <div class="mb-4">
+              <h4>Placa Mãe</h4>
+              <!-- Slot para inserir card da placa-mãe -->
+              <div id="slot-Placa-Mae" class="component-slot" data-slot="mobo" data-label="Placa Mãe"></div>
+            </div>
+
+            <div class="mb-4">
+              <h4>RAM</h4>
+              <!-- Slot para inserir card de memória -->
+              <div id="slot-RAM" class="component-slot" data-slot="ram" data-label="RAM"></div>
+            </div>
+
+            <div class="mb-4">
+              <h4>GPU</h4>
+              <!-- Slot para inserir card da placa de vídeo -->
+              <div id="slot-GPU" class="component-slot" data-slot="gpu" data-label="GPU"></div>
+            </div>
+
+            <div class="mb-4">
+              <h4>Armazenamento</h4>
+              <!-- Slot para inserir card de armazenamento (SSD/HDD) -->
+              <div id="slot-Armazenamento" class="component-slot" data-slot="ssd" data-label="Armazenamento"></div>
+            </div>
+
+            <div class="mb-4">
+              <h4>Fonte</h4>
+              <!-- Slot para inserir card da fonte -->
+              <div id="slot-Fonte" class="component-slot" data-slot="psu" data-label="Fonte"></div>
+            </div>
+
+            <div class="mb-4">
+              <h4>Gabinete</h4>
+              <!-- Slot para inserir card do gabinete -->
+              <div id="slot-Gabinete" class="component-slot" data-slot="case" data-label="Gabinete"></div>
+            </div>
+
+            <!-- Slot reservado para itens sem correspondência; oculto por padrão -->
+            <div id="slot-outras" class="component-slot" data-slot="outras" data-label="Outras" hidden></div>
+          </div>
+        </section>
+
+        <!-- Barra lateral: resumo e ação de finalizar -->
+        <aside class="col-lg-4">
+          <div class="card sticky-top">
+            <div class="card-body">
+              <h5 class="card-title">Resumo final da configuração</h5>
+
+              <!-- Lista atualizada dinamicamente com os itens selecionados -->
+              <div id="summaryList" class="mb-3">
+                <p class="text-muted">Nenhum componente selecionado.</p>
+              </div>
+
+              <hr>
+
+              <!-- Botão habilitado pelo JS quando todos os slots obrigatórios estiverem preenchidos -->
+              <div class="d-grid">
+                <button id="finalizeBtn" class="btn btn-success" type="button" disabled>Finalizar Montagem</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts carregados de forma deferida para garantir DOM pronto -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="monte.js" defer></script>
+</body>
+
+</html>

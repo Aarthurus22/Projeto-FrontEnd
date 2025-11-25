@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cpu-ryzen5-5600x",
+    "title": "AMD Ryzen 5 5600X",
+    "description": "6 núcleos / 12 threads - ótimo custo/benefício para jogos e produtividade.",
+    "image": "https://m.media-amazon.com/images/I/51D3DrDmwkL.jpg"
+  },
+  {
+    "id": "mobo-b550",
+    "category": "Placa Mãe",
+    "title": "B550M Gigabyte Aorus Elite",
+    "description": "Placa-mãe com suporte a Ryzen e boa conectividade.",
+    "image": "https://images.kabum.com.br/produtos/fotos/114781/placa-mae-gigabyte-b550m-aorus-elite-amd-am4-micro-atx-ddr4_1594908595_gg.jpg"
+  },
+  {
+    "id": "ram-32gb-ddr5",
+    "category": "RAM",
+    "title": "32GB DDR5 4800MHz",
+    "description": "Kit 32GB (2x16GB) para multitarefa e jogos.",
+    "image": "https://http2.mlstatic.com/D_603178-MLA98932189569_112025-C.jpg"
+  },
+  {
+    "id": "gpu-rtx5060-ti",
+    "category": "GPU",
+    "title": "NVIDIA GeForce RTX 5060 Ti",
+    "description": "Jogue em 1080p/1440p com Ray Tracing e DLSS com boa fluidez.",
+    "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRV5VSRNFWshG4h-tSfz05_-RedQwLBMB5WjEHLU_0ng8b2tkWipzyFeNZWtUyJUFF6Ktkw7XxGF0H76UiMDfCkAzhTyzEDKpZtCwxeG2gxkha6HfXyogsCig"
+  },
+  {
+    "id": "ssd-240gb-nvme",
+    "category": "Armazenamento",
+    "title": "SSD NVMe 240GB",
+    "description": "Leitura/gravação e inicialização rápida para seu sistema e jogos.",
+    "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/381078/xlarge/SSD-WD-Green-SN350-240GB-M-2-2280-NVME-Leitura-2400MB-s-E-Grava-o-900MB-s-Wds240g2g0c_1747060201.jpg"
+  },
+  {
+    "id": "psu-650w",
+    "category": "Fonte",
+    "title": "Fonte 650W 80+ Bronze",
+    "description": "Suficiente para aguentar o tranco.",
+    "image": "https://images6.kabum.com.br/produtos/fotos/516056/fonte-corsair-cx-series-cx650-650w-80-plus-bronze-sem-cabo-preto-cp-9020278-br_1714483460_gg.jpg"
+  },
+  {
+    "id": "case-mid",
+    "category": "Gabinete",
+    "title": "Gabinete Mid Tower",
+    "description": "Gabinete com bom fluxo de ar e espaço para upgrades futuros.",
+    "image": "https://images1.kabum.com.br/produtos/fotos/779931/gabinete-gamer-gamdias-aura-gc2-elite-mid-tower-argb-atx-lateral-em-vidro-temperado-preto-aura-gc2-elite-argb_1747673548_gg.jpg"
+  }
+]
